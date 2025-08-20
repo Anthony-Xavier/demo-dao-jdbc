@@ -6,21 +6,21 @@ import java.util.Objects;
 
 public class Seller implements Serializable {
 
-    private int Id;
+    private Integer Id;
     private String name;
     private String email;
-    private Date bithDate;
+    private Date birthDate;
     private Double baseSalary;
 
     private Department department;
 
     public Seller(){};
 
-    public Seller(int id, String name, String email, Date bithDate, Double baseSalary, Department department) {
+    public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
         Id = id;
         this.name = name;
         this.email = email;
-        this.bithDate = bithDate;
+        this.birthDate = birthDate;
         this.baseSalary = baseSalary;
         this.department = department;
     }
@@ -49,12 +49,12 @@ public class Seller implements Serializable {
         this.email = email;
     }
 
-    public Date getBithDate() {
-        return bithDate;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void setBithDate(Date bithDate) {
-        this.bithDate = bithDate;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public Double getBaseSalary() {
@@ -77,12 +77,12 @@ public class Seller implements Serializable {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Seller seller = (Seller) o;
-        return Id == seller.Id && Objects.equals(name, seller.name) && Objects.equals(email, seller.email) && Objects.equals(bithDate, seller.bithDate) && Objects.equals(baseSalary, seller.baseSalary) && Objects.equals(department, seller.department);
+        return Id == seller.Id && Objects.equals(name, seller.name) && Objects.equals(email, seller.email) && Objects.equals(birthDate, seller.birthDate) && Objects.equals(baseSalary, seller.baseSalary) && Objects.equals(department, seller.department);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Id, name, email, bithDate, baseSalary, department);
+        return Objects.hash(Id, name, email, birthDate, baseSalary, department);
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Seller implements Serializable {
                 "Id=" + Id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", bithDate=" + bithDate +
+                ", birthDate=" + birthDate +
                 ", baseSalary=" + baseSalary +
                 ", department=" + department +
                 '}';
